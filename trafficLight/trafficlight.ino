@@ -172,6 +172,9 @@ void loop() {
             return; 
         } else if (command.equals("auto")) {
             manual_mode = false; 
+            digitalWrite(LED_RED, LOW);
+            digitalWrite(LED_YEL, LOW);
+            digitalWrite(LED_GRN, LOW);
             Serial.println("Переключён в автоматический режим.");
             process_state2();
         }
